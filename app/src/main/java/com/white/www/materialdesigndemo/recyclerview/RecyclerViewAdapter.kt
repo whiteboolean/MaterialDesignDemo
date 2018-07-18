@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.white.www.materialdesigndemo.R
 
 /**
  * Author: White
  * Time:2018/7/18 14:39
- * Description:
+ * Description:recyclerView的适配器 布局类
  */
 
 class RecyclerViewAdapter(private val list: MutableList<String>) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
@@ -49,12 +48,50 @@ class RecyclerViewAdapter(private val list: MutableList<String>) : RecyclerView.
         holder.tv.setBackgroundColor(Color.rgb(100, (Math.random() * 255).toInt(), (Math.random() * 255).toInt()))
         holder.tv.text = list[position]
         holder.tv.layoutParams = params
+
+        if (::listener.isInitialized) {
+            holder.tv.setOnClickListener {
+                listener.onItemClick(holder.tv, holder.layoutPosition)
+            }
+        }
     }
 
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tv = itemView.findViewById<TextView>(android.R.id.text1)
     }
+
+
+    fun addItem(position: Int) {
+        list.add(position, "additem" + position)
+        //提示全局刷新 ---会影响效率
+//        notifyDataSetChanged()
+        notifyItemInserted(position)
+    }
+
+    fun remove(position: Int) {
+        list.removeAt(position)
+        //全局刷新  --- 会影响效率
+//        notifyDataSetChanged()
+        //局部刷新
+        notifyItemRemoved(position)
+
+    }
+
+
+    private lateinit var listener: OnItemClickListener
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.listener = listener
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(view: View, position: Int)
+    }
+
+
+    
+
 
 
 }
