@@ -20,6 +20,7 @@ class RecyclerViewAdapter(private val list: MutableList<String>,
                           private val dragListener: StartDragListener)
     : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>(), ItemMoveListener {
 
+
     override fun onItemRemove(fromPosition: Int) {
         list.removeAt(fromPosition)
         notifyItemRemoved(fromPosition)

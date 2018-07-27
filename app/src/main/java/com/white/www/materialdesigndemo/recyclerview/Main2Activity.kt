@@ -15,6 +15,9 @@ import com.white.www.materialdesigndemo.util.toast
 import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.content_main2.*
 
+/**
+ * RecyclerView
+ */
 class Main2Activity : AppCompatActivity() {
 
     private var isGrid = false

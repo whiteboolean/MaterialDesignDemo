@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
+    android:background="@color/white"
     android:layout_margin="5dp">
 
     <ImageView
+        android:layout_margin="5dp"
         android:background="@drawable/ic_launcher_background"
         android:id="@+id/iv"
         android:layout_width="0dp"

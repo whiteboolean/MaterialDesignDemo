@@ -2,4 +2,18 @@
     <string name="app_name">MaterialDesignDemo</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_main4">Main4Activity</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_activity_text_input_layout">TextInputLayoutActivity</string>
+    <string name="title_activity_toolbar">ToolbarActivity</string>
+    <string name="title_activity_palette_activity">PaletteActivityActivity</string>
+    <string name="title_activity_translucent_scroll_toolbar">TranslucentScrollToolbarActivity
+    </string>
+    <string name="title_activity_tab_layout">TabLayoutActivity</string>
+    <string name="title_activity_chenjin_shi">ChenjinShiActivity</string>
+    <string name="title_activity_my_behavior">MyBehaviorActivity</string>
+    <string name="title_activity_fab_animation">FabAnimationActivity</string>
+    <string name="title_activity_fab_behavior">FabBehaviorActivity</string>
 </resources>

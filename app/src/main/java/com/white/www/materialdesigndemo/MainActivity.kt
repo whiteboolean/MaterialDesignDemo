@@ -1,18 +1,18 @@
 package com.white.www.materialdesigndemo
 
-import android.app.AlertDialog
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.ListPopupWindow
+import android.support.v7.widget.PopupMenu
 import android.widget.ArrayAdapter
-import android.widget.PopupMenu
 import com.white.www.materialdesigndemo.util.toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
- * MainActivity
+ * MainActivity 
  */
 class MainActivity : AppCompatActivity() {
 

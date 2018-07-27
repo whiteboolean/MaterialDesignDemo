@@ -9,20 +9,89 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity
-            android:name=".recyclerview.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".itemtouchhelper.Main3Activity"
-            android:label="@string/title_activity_main3"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MenuMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name=".recyclerview.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".itemtouchhelper.Main3Activity"
+            android:label="@string/title_activity_main3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".drawerlayout.Main4Activity"
+            android:label="@string/title_activity_main4"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".navigation.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".textinputlayout.TextInputLayoutActivity"
+            android:label="@string/title_activity_text_input_layout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".toolbar.ToolbarActivity"
+            android:label="@string/title_activity_toolbar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".toolbar.SearchViewActivity2" />
+        <activity
+            android:name=".palette.PaletteActivityActivity"
+            android:label="@string/title_activity_palette_activity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".translucentscrolltoolbar.TranslucentScrollToolbarActivity"
+            android:label="@string/title_activity_translucent_scroll_toolbar"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".tablayout.TabLayoutActivity"
+            android:label="@string/title_activity_tab_layout"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".chenjin.design.ChenjinShiActivity"
+            android:label="@string/title_activity_chenjin_shi"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".parallel.MainActivity">
+        </activity>
+        <activity
+            android:name=".appbarlayout.MyBehaviorActivity"
+            android:label="@string/title_activity_my_behavior"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".fabanimation.FabAnimationActivity"
+            android:label="@string/title_activity_fab_animation"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".fabbehavior.FabBehaviorActivity"
+            android:label="@string/title_activity_fab_behavior"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".my.behavior.MyBehaviorActivity"
+            android:label="@string/title_activity_my_behavior">
+
+        </activity>
+
+        <activity android:name=".my.behavior.NestedScrollViewAct">
+
         </activity>
     </application>
 

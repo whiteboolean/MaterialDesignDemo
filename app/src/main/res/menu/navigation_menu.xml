@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_gallery"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:orderInCategory="0"
+        android:title="相册" />
+    <item
+        android:id="@+id/action_details"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:orderInCategory="1"
+        android:title="详情" />
+    <item
+        android:id="@+id/action_"
+        android:icon="@android:drawable/ic_menu_help"
+        android:orderInCategory="2"
+        android:title="相册" />
+    <item
+        android:id="@+id/action_gallery4"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:orderInCategory="3"
+        android:title="相册" >
+        <menu >
+            <item
+                android:id="@+id/menu_3"
+                android:title="memu" />
+            <item
+                android:id="@+id/menu_4"
+                android:title="memu" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_gallery5"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:orderInCategory="4"
+        android:title="相册">
+        <menu>
+            <item
+                android:iconTintMode="screen"
+                android:id="@+id/menu_2"
+                android:title="memu" />
+            <item
+                android:id="@+id/menu_1"
+                android:title="memu" />
+        </menu>
+    </item>
+
+
+</menu>

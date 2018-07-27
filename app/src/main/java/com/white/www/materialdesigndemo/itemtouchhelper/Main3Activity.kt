@@ -1,5 +1,6 @@
 package com.white.www.materialdesigndemo.itemtouchhelper
 
+import android.graphics.Canvas
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -13,10 +14,10 @@ import kotlinx.android.synthetic.main.content_main2.*
 import android.support.v7.widget.DividerItemDecoration
 
 
-
 /**
  * RecyclerView的动画交互类
  *
+ * ItemTouchHelper
  */
 
 class Main3Activity : AppCompatActivity(), StartDragListener {
@@ -43,7 +44,6 @@ class Main3Activity : AppCompatActivity(), StartDragListener {
         rcv.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
 
-
         //条目触摸帮助类
         val callBack = MyItemTouchHelperCallBack(adapter)
         itemTouchHelper = ItemTouchHelper(callBack)
@@ -55,6 +55,11 @@ class Main3Activity : AppCompatActivity(), StartDragListener {
     override fun onStartDrag(viewHolder: RecyclerView.ViewHolder) {
         itemTouchHelper.startDrag(viewHolder)
     }
+
+
+
+
+
 
 
     inner class MyItemTouchHelperCallBack(private val itemTouchMoveListener: ItemMoveListener) : ItemTouchHelper.Callback() {
@@ -107,6 +112,52 @@ class Main3Activity : AppCompatActivity(), StartDragListener {
             itemTouchMoveListener.onItemRemove(viewHolder.adapterPosition)
         }
 
+
+        /**
+         * 选中的状态
+         */
+        override fun onSelectedChanged(viewHolder: RecyclerView.ViewHolder?, actionState: Int) {
+            //判断选中状态
+            if (actionState != ItemTouchHelper.ACTION_STATE_IDLE) {
+                viewHolder?.itemView?.setBackgroundColor(viewHolder.itemView.context.resources.getColor(R.color.colorAccent))
+            }
+            super.onSelectedChanged(viewHolder, actionState)
+        }
+
+        override fun clearView(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder) {
+            viewHolder.itemView.setBackgroundColor(viewHolder.itemView.context.resources.getColor(R.color.white))
+
+            //清除时候还原到原来的状态
+            viewHolder.itemView.alpha = 1f
+            //缩放动画
+            viewHolder.itemView.scaleX = 1f
+            viewHolder.itemView.scaleY = 1f
+            //恢复之前的颜色
+            super.clearView(recyclerView, viewHolder)
+        }
+
+        override fun onChildDraw(c: Canvas, recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, dX: Float, dY: Float, actionState: Int, isCurrentlyActive: Boolean) {
+
+            //dx：水平方向滑动的距离 (负：往左 正：往右) 范围：0~View.getWidth  0~1
+            if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
+                //透明度动画
+                val alpha = 1 - Math.abs(dX) / viewHolder.itemView.width
+                viewHolder.itemView.alpha = alpha
+                //缩放动画
+//                viewHolder.itemView.scaleX = alpha
+//                viewHolder.itemView.scaleY = alpha
+//                viewHolder.itemView.rotation = alpha
+            }
+
+            //判断是否超出或者达到width/2 ， 就让其一直处于这个位置
+//            if (Math.abs(dX) >= viewHolder.itemView.width / 2) {
+//                viewHolder.itemView.translationX = -0.5f * viewHolder.itemView.width
+//            }else{
+//                viewHolder.itemView.translationX = dX
+//            }
+
+            super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+        }
     }
 
 }

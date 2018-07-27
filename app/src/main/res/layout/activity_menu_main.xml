@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:divider="@drawable/divider_dark"
+        app:showDividers="middle">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_md"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg2_blue"
+            android:text="md兼容控件" />
+
+        <Button
+            android:id="@+id/btn_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg2_blue"
+            android:text="recyclerView切换" />
+
+        <Button
+            android:id="@+id/btn_recyclerview_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView的Item动画交互" />
+
+        <Button
+            android:id="@+id/btn_drawerToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="抽屉菜单" />
+
+        <Button
+            android:id="@+id/btn_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="抽屉菜单2" />
+
+        <Button
+            android:id="@+id/btn_TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextInputLayout" />
+
+        <Button
+            android:id="@+id/btn_ToolbarActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ToolbarActivity" />
+
+        <Button
+            android:id="@+id/btn_PaletteActivityActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="调色板" />
+
+        <Button
+            android:id="@+id/btn_TranslucentScrollToolbarActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TranslucentScrollToolbarActivity" />
+
+        <Button
+            android:id="@+id/btn_TabLayoutActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TabLayoutActivity" />
+
+        <Button
+            android:id="@+id/btn_chenjinshi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="沉浸式状态栏" />
+
+        <Button
+            android:id="@+id/btn_MyBehaviorActivity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Behavior" />
+
+        <Button
+            android:id="@+id/btn_FabAnimationActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FabAnimationActivity" />
+
+        <Button
+
+            android:id="@+id/btn_FabBehaviorActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fab按钮自定义Behavior" />
+
+        <Button
+            android:id="@+id/btn_MyBehaviorActivity2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Behavior" />
+
+        <Button
+            android:id="@+id/btn_NestedScrollViewAct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="嵌套滑动Behaviro" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v4.widget.NestedScrollView>
