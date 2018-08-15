@@ -9,7 +9,7 @@ package com.white.www.materialdesigndemo.itemtouchhelper;
 public interface ItemMoveListener {
 
     /**
-     * 当拖拽的时候回调</br>
+     * 当拖拽的时候回调
      * 可以在此方法里面实现：拖拽条目并实现刷新效果
      *
      * @param fromPosition
@@ -20,6 +20,7 @@ public interface ItemMoveListener {
 
     /**
      * 从哪里开始滑
+     *
      * @param fromPosition
      * @return
      */

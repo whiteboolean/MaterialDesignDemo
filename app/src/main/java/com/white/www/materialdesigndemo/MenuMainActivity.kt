@@ -9,6 +9,7 @@ import android.view.View
 import com.white.www.materialdesigndemo.appbarlayout.MyBehaviorActivity
 import com.white.www.materialdesigndemo.chenjin.design.ChenjinShiActivity
 import com.white.www.materialdesigndemo.drawerlayout.Main4Activity
+import com.white.www.materialdesigndemo.event.EventTestActivity
 import com.white.www.materialdesigndemo.fabanimation.FabAnimationActivity
 import com.white.www.materialdesigndemo.fabbehavior.FabBehaviorActivity
 import com.white.www.materialdesigndemo.itemtouchhelper.Main3Activity
@@ -56,6 +57,8 @@ class MenuMainActivity : AppCompatActivity(), View.OnClickListener {
         btn_FabBehaviorActivity.setOnClickListener(this)
         btn_MyBehaviorActivity2.setOnClickListener(this)
         btn_NestedScrollViewAct.setOnClickListener(this)
+        btn_event_transmit.setOnClickListener(this)
+
 
     }
 
@@ -79,6 +82,7 @@ class MenuMainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_FabBehaviorActivity ->jumpToActivity(FabBehaviorActivity::class.java)
             R.id.btn_MyBehaviorActivity2 ->jumpToActivity(com.white.www.materialdesigndemo.my.behavior.MyBehaviorActivity::class.java)
             R.id.btn_NestedScrollViewAct ->jumpToActivity(NestedScrollViewAct::class.java)
+            R.id.btn_event_transmit ->jumpToActivity(EventTestActivity::class.java)
         }
     }
 }

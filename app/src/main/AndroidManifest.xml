@@ -17,29 +17,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".recyclerview.Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".itemtouchhelper.Main3Activity"
             android:label="@string/title_activity_main3"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
         <activity
-            android:screenOrientation="portrait"
             android:name=".drawerlayout.Main4Activity"
             android:label="@string/title_activity_main4"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".navigation.NavigationActivity"
             android:label="@string/title_activity_navigation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".textinputlayout.TextInputLayoutActivity"
@@ -66,33 +61,24 @@
             android:name=".chenjin.design.ChenjinShiActivity"
             android:label="@string/title_activity_chenjin_shi"
             android:theme="@style/AppTheme" />
-        <activity android:name=".parallel.MainActivity">
-        </activity>
+        <activity android:name=".parallel.MainActivity"></activity>
         <activity
             android:name=".appbarlayout.MyBehaviorActivity"
             android:label="@string/title_activity_my_behavior"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".fabanimation.FabAnimationActivity"
             android:label="@string/title_activity_fab_animation"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".fabbehavior.FabBehaviorActivity"
             android:label="@string/title_activity_fab_behavior"
-            android:theme="@style/AppTheme">
-        </activity>
-
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".my.behavior.MyBehaviorActivity"
-            android:label="@string/title_activity_my_behavior">
-
-        </activity>
-
-        <activity android:name=".my.behavior.NestedScrollViewAct">
-
-        </activity>
+            android:label="@string/title_activity_my_behavior"></activity>
+        <activity android:name=".my.behavior.NestedScrollViewAct"></activity>
+        <activity android:name=".event.EventTestActivity"></activity>
     </application>
 
 </manifest>

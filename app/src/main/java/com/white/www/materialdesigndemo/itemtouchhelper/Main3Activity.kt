@@ -57,11 +57,6 @@ class Main3Activity : AppCompatActivity(), StartDragListener {
     }
 
 
-
-
-
-
-
     inner class MyItemTouchHelperCallBack(private val itemTouchMoveListener: ItemMoveListener) : ItemTouchHelper.Callback() {
 
         /**
@@ -98,9 +93,9 @@ class Main3Activity : AppCompatActivity(), StartDragListener {
                 return false
             }
             //在拖拽的过程当中 不断地调用adapter.notifyitemchanged()
-            val boolean = itemTouchMoveListener.onItemMove(viewHolder.adapterPosition, target.adapterPosition)
 
-            return boolean
+
+            return itemTouchMoveListener.onItemMove(viewHolder.adapterPosition, target.adapterPosition)
         }
 
 

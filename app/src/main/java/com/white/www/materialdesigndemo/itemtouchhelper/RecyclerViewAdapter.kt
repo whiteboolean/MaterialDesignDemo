@@ -1,6 +1,5 @@
 package com.white.www.materialdesigndemo.itemtouchhelper
 
-import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -45,7 +44,7 @@ class RecyclerViewAdapter(private val list: MutableList<String>,
         }
     }
 
-    @SuppressLint("ClickableViewAccessibility")
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.tv.text = list[position]
         holder.imageView.setOnTouchListener { v, event ->
